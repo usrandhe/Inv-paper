@@ -1,6 +1,6 @@
 'use client';
 import * as React from 'react';
-import Orders from '@/components/Orders';
+import NewForm from '@/components/NewForm';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import { useForm } from 'react-hook-form';
@@ -9,6 +9,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import AddIcon from '@mui/icons-material/Add';
 import Card from '@mui/material/Card';
+
 export default function ItemGroup() {
   const {
     register,
@@ -22,7 +23,7 @@ export default function ItemGroup() {
       {/* Recent Orders */}
       {/* <Grid item xs={12}>
         <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-          <Orders />
+          <NewForm />
          
         </Paper>
       </Grid> */}
@@ -38,7 +39,14 @@ export default function ItemGroup() {
           New Item
         </Button>
       </Stack>
-      <Card></Card>
+      <Card>
+        <Grid item xs={12}>
+          <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
+            <NewForm />
+
+          </Paper>
+        </Grid>
+      </Card>
     </>
   );
 }
