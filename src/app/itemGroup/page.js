@@ -1,5 +1,5 @@
 'use client';
-import * as React from 'react';
+import React, { useState } from "react";
 import NewForm from '@/components/NewForm';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
@@ -11,13 +11,10 @@ import AddIcon from '@mui/icons-material/Add';
 import Card from '@mui/material/Card';
 
 export default function ItemGroup() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => console.log(data);
-  console.log(errors);
+ const [addNew, setAddNew] = useState(true);
+ const addNewItem = ()=> {
+  setAddNew(true)
+ }
   return (
     <>
       {/* Recent Orders */}
@@ -35,15 +32,14 @@ export default function ItemGroup() {
       >
         <Typography variant="h5">Item Group</Typography>
 
-        <Button variant="contained" startIcon={<AddIcon />}>
+        <Button variant="contained" startIcon={<AddIcon />} onClick={addNewItem}>
           New Item
         </Button>
       </Stack>
       <Card>
-        <Grid item xs={12}>
+        <Grid>
           <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-            <NewForm />
-
+            <NewForm addNew={addNew} setAddNew={setAddNew}/>
           </Paper>
         </Grid>
       </Card>

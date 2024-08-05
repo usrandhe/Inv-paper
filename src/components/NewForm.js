@@ -12,23 +12,33 @@ import {
     TableContainer,
     TableHead,
     TableRow,
-    Paper,
+    Paper, Select,
+    MenuItem,
+    InputLabel,
+    FormControl, Dialog,
+    DialogActions,
+    DialogContent,
+    DialogContentText,
+    DialogTitle
 } from "@mui/material";
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import Grid from '@mui/material/Grid';
 
 // Validation Schema
 const schema = yup.object().shape({
-    field1: yup.string().required("Field 1 is required"),
-    field2: yup.string().required("Field 2 is required"),
-    field3: yup.string().required("Field 3 is required"),
+    shortName: yup.string().required("Field 1 is required"),
+    fullName: yup.string().required("Field 2 is required"),
+    category: yup.string().required("Field 3 is required"),
 });
 
-function NewForm() {
+function NewForm({ addNew, setAddNew }) {
     const [entries, setEntries] = useState([]);
     const [editIndex, setEditIndex] = useState(null);
     const [searchTerm, setSearchTerm] = useState("");
+    const [deleteIndex, setDeleteIndex] = useState(null); // New state for deletion
+    const [open, setOpen] = useState(false); // Dialog state
     const {
         handleSubmit,
         control,
@@ -38,9 +48,9 @@ function NewForm() {
     } = useForm({
         resolver: yupResolver(schema),
         defaultValues: {   // Set default values for controlled components
-            field1: "",
-            field2: "",
-            field3: "",
+            shortName: "",
+            fullName: "",
+            category: "",
         },
     });
 
@@ -51,8 +61,10 @@ function NewForm() {
             updatedEntries[editIndex] = data;
             setEntries(updatedEntries);
             setEditIndex(null);
+            setAddNew(false);
         } else {
             setEntries([...entries, data]);
+            setAddNew(false);
         }
         reset();
     };
@@ -60,16 +72,31 @@ function NewForm() {
     // Handle entry edit action
     const handleEdit = (index) => {
         const entry = entries[index];
-        setValue("field1", entry.field1);
-        setValue("field2", entry.field2);
-        setValue("field3", entry.field3);
+        setValue("shortName", entry.shortName);
+        setValue("fullName", entry.fullName);
+        setValue("category", entry.category);
         setEditIndex(index);
+        setAddNew(true);
+    };
+
+    // Handle opening the delete confirmation dialog
+    const handleOpenDeleteDialog = (index) => {
+        setDeleteIndex(index);
+        setOpen(true);
+    };
+
+    // Handle closing the delete confirmation dialog
+    const handleClose = () => {
+        setOpen(false);
+        setDeleteIndex(null);
     };
 
     // Handle entry deletion
-    const handleDelete = (index) => {
-        const updatedEntries = entries.filter((_, i) => i !== index);
+    const handleDelete = () => {
+        const updatedEntries = entries.filter((_, i) => i !== deleteIndex);
         setEntries(updatedEntries);
+        handleClose();
+        updatedEntries.length === 0 && setAddNew(true);
     };
 
     // Filter entries based on search term
@@ -81,105 +108,140 @@ function NewForm() {
 
     return (
         <Container>
-            <Typography variant="h4" component="h1" gutterBottom>
-                Manage Entries
+            <Typography variant="h5" component="h1" gutterBottom>
+                Manage Item Group Entries
             </Typography>
 
             {/* Form Section */}
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <Controller
-                    name="field1"
-                    control={control}
-                    render={({ field }) => (
-                        <TextField
-                            {...field}
-                            label="Field 1"
-                            variant="outlined"
-                            fullWidth
-                            margin="normal"
-                            error={!!errors.field1}
-                            helperText={errors.field1?.message}
+            {addNew ? (
+                <React.Fragment> 
+                <Grid item md={8}>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <Controller
+                            name="shortName"
+                            control={control}
+                            render={({ field }) => (
+                                <TextField
+                                    {...field}
+                                    label="Short Name"
+                                    variant="outlined"
+                                    fullWidth
+                                    margin="normal"
+                                    error={!!errors.shortName}
+                                    helperText={errors.shortName?.message}
+                                />
+                            )}
                         />
-                    )}
-                />
-                <Controller
-                    name="field2"
-                    control={control}
-                    render={({ field }) => (
-                        <TextField
-                            {...field}
-                            label="Field 2"
-                            variant="outlined"
-                            fullWidth
-                            margin="normal"
-                            error={!!errors.field2}
-                            helperText={errors.field2?.message}
+                        <Controller
+                            name="fullName"
+                            control={control}
+                            render={({ field }) => (
+                                <TextField
+                                    {...field}
+                                    label="Full Name"
+                                    variant="outlined"
+                                    fullWidth
+                                    margin="normal"
+                                    error={!!errors.fullName}
+                                    helperText={errors.fullName?.message}
+                                />
+                            )}
                         />
-                    )}
-                />
-                <Controller
-                    name="field3"
-                    control={control}
-                    render={({ field }) => (
-                        <TextField
-                            {...field}
-                            label="Field 3"
-                            variant="outlined"
-                            fullWidth
-                            margin="normal"
-                            error={!!errors.field3}
-                            helperText={errors.field3?.message}
-                        />
-                    )}
-                />
-                <Button
-                    type="submit"
-                    variant="contained"
-                    color="primary"
-                    sx={{ mt: 2 }}
-                >
-                    {editIndex !== null ? "Update" : "Add New"}
-                </Button>
-            </form>
 
-            {/* Search Bar */}
-            <TextField
-                label="Search"
-                variant="outlined"
-                fullWidth
-                margin="normal"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-            />
+                        <Controller
+                            name="category"
+                            control={control}
+                            render={({ field }) => (
+                                <FormControl
+                                    fullWidth
+                                    margin="normal"
+                                    error={!!errors.category}
+                                    variant="outlined"
+                                >
+                                    <InputLabel>Category</InputLabel>
+                                    <Select {...field} label="Category">
+                                        <MenuItem value="">
+                                            <em>None</em>
+                                        </MenuItem>
+                                        <MenuItem value="Option1">Option 1</MenuItem>
+                                        <MenuItem value="Option2">Option 2</MenuItem>
+                                        <MenuItem value="Option3">Option 3</MenuItem>
+                                    </Select>
+                                </FormControl>
+                            )}
+                        />
+                        <Button
+                            type="submit"
+                            variant="contained"
+                            color="primary"
+                            sx={{ mt: 2 }}
+                        >
+                            {editIndex !== null ? "Update" : "Save"}
+                        </Button>
+                    </form>
+                </Grid>
+                </React.Fragment>) : (
+                <React.Fragment>
+                    <TextField
+                        label="Search"
+                        variant="outlined"
+                        fullWidth
+                        margin="normal"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                    />
+                    <TableContainer component={Paper}>
+                        <Table>
+                            <TableHead>
+                                <TableRow>
+                                    <TableCell>Field 1</TableCell>
+                                    <TableCell>Field 2</TableCell>
+                                    <TableCell>Field 3</TableCell>
+                                    <TableCell>Actions</TableCell>
+                                </TableRow>
+                            </TableHead>
+                            <TableBody>
+                                {filteredEntries.map((entry, index) => (
+                                    <TableRow key={index}>
+                                        <TableCell>{entry.shortName}</TableCell>
+                                        <TableCell>{entry.fullName}</TableCell>
+                                        <TableCell>{entry.category}</TableCell>
+                                        <TableCell>
+                                            <Button onClick={() => handleEdit(index)}>Edit</Button>
+                                            <Button color="error"
+                                                onClick={() => handleOpenDeleteDialog(index)}>
+                                                Delete
+                                            </Button>
+                                        </TableCell>
+                                    </TableRow>
+                                ))}
+                            </TableBody>
+                        </Table>
+                    </TableContainer></React.Fragment>)}
 
-            {/* Data Table */}
-            <TableContainer component={Paper}>
-                <Table>
-                    <TableHead>
-                        <TableRow>
-                            <TableCell>Field 1</TableCell>
-                            <TableCell>Field 2</TableCell>
-                            <TableCell>Field 3</TableCell>
-                            <TableCell>Actions</TableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {filteredEntries.map((entry, index) => (
-                            <TableRow key={index}>
-                                <TableCell>{entry.field1}</TableCell>
-                                <TableCell>{entry.field2}</TableCell>
-                                <TableCell>{entry.field3}</TableCell>
-                                <TableCell>
-                                    <Button onClick={() => handleEdit(index)}>Edit</Button>
-                                    <Button color="error" onClick={() => handleDelete(index)}>
-                                        Delete
-                                    </Button>
-                                </TableCell>
-                            </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
-            </TableContainer>
+            {/* Delete Confirmation Dialog */}
+            <Dialog
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+            >
+                <DialogTitle id="alert-dialog-title">{"Confirm Deletion"}</DialogTitle>
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                        Are you sure you want to delete this entry? This action cannot be
+                        undone.
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleClose} color="primary">
+                        Cancel
+                    </Button>
+                    <Button onClick={handleDelete} color="error" autoFocus>
+                        Delete
+                    </Button>
+                </DialogActions>
+            </Dialog>
         </Container>
     );
 }
