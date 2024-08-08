@@ -18,12 +18,11 @@ import Badge from '@mui/material/Badge';
 import List from '@mui/material/List';
 import MainListItems from '@/components/MainListItems';
 import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
-import Link from '@mui/material/Link';
+
 import Copyright from '@/components/Copyright';
 export default function RootLayout(props) {
   const [open, setOpen] = React.useState(true);
+  const [moduleTitle, setModuleTitle] = React.useState('Dashboard');
   const toggleDrawer = () => {
     setOpen(!open);
   };
@@ -61,7 +60,7 @@ export default function RootLayout(props) {
                     noWrap
                     sx={{ flexGrow: 1 }}
                   >
-                    Dashboard
+                    {moduleTitle}
                   </Typography>
                   <IconButton color="inherit">
                     <Badge badgeContent={4} color="secondary">
@@ -85,7 +84,7 @@ export default function RootLayout(props) {
                 </Toolbar>
                 <Divider />
                 <List component="nav">
-                  <MainListItems />
+                  <MainListItems setModuleTitle={setModuleTitle}/>
                   {/* <Divider sx={{ my: 1 }} />
             {secondaryListItems} */}
                 </List>

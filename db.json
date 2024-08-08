@@ -1,0 +1,544 @@
+{
+  "entries": [
+    {
+      "id": "a08b",
+      "category": "1",
+      "fullName": "Umesh Randhe",
+      "shortName": "test2"
+    },
+    {
+      "id": "68f7",
+      "category": "4",
+      "fullName": "ddddddd",
+      "shortName": "ddd2"
+    },
+    {
+      "id": "a4c4",
+      "category": "1",
+      "fullName": "Umesh Randhe",
+      "shortName": "test2"
+    },
+    {
+      "id": "5945",
+      "category": "21",
+      "fullName": "Umesh R",
+      "shortName": "test3"
+    },
+    {
+      "id": "eccf",
+      "category": "10",
+      "fullName": "test full name",
+      "shortName": "umesh 2"
+    },
+    {
+      "id": "2323",
+      "category": "4",
+      "fullName": "randhe1",
+      "shortName": "umesh 2"
+    },
+    {
+      "id": "904e",
+      "category": "21",
+      "fullName": "Umesh R",
+      "shortName": "test2"
+    },
+    {
+      "id": "b81e",
+      "category": "3",
+      "fullName": "full name",
+      "shortName": "new entery"
+    },
+    {
+      "id": "52b5",
+      "category": "4",
+      "fullName": "full new",
+      "shortName": "entry new"
+    },
+    {
+      "id": "8520",
+      "category": "10",
+      "fullName": "jbb",
+      "shortName": "check"
+    },
+    {
+      "id": "5131",
+      "category": "22",
+      "fullName": "17",
+      "shortName": "17"
+    },
+    {
+      "id": "8b14",
+      "category": "2",
+      "fullName": "12",
+      "shortName": "12"
+    },
+    {
+      "id": "da31",
+      "category": "3",
+      "fullName": "13",
+      "shortName": "13"
+    }
+  ],
+  "lookup": [
+    {
+      "LOOKUP_VALUE_ID": 1,
+      "LOOKUP_VALUE": "PURCHASE",
+      "id": "cfe7"
+    },
+    {
+      "LOOKUP_VALUE_ID": 2,
+      "LOOKUP_VALUE": "SALES",
+      "id": "0699"
+    },
+    {
+      "LOOKUP_VALUE_ID": 3,
+      "LOOKUP_VALUE": "PURCHASE RET",
+      "id": "8308"
+    },
+    {
+      "LOOKUP_VALUE_ID": 4,
+      "LOOKUP_VALUE": "SALE RET",
+      "id": "f3f4"
+    },
+    {
+      "LOOKUP_VALUE_ID": 5,
+      "LOOKUP_VALUE": "OP. STOCK",
+      "id": "0d8c"
+    },
+    {
+      "LOOKUP_VALUE_ID": 10,
+      "LOOKUP_VALUE": "Managing Directory",
+      "id": "e62e"
+    },
+    {
+      "LOOKUP_VALUE_ID": 11,
+      "LOOKUP_VALUE": "Propritor",
+      "id": "b91a"
+    },
+    {
+      "LOOKUP_VALUE_ID": 21,
+      "LOOKUP_VALUE": "Paper",
+      "id": "6ce4"
+    },
+    {
+      "LOOKUP_VALUE_ID": 22,
+      "LOOKUP_VALUE": "Not in useage",
+      "id": "6d68"
+    },
+    {
+      "LOOKUP_VALUE_ID": 23,
+      "LOOKUP_VALUE": "Printing Plates, Chemicals and Inks",
+      "id": "9ed7"
+    },
+    {
+      "LOOKUP_VALUE_ID": 24,
+      "LOOKUP_VALUE": "Paint Chemicals",
+      "id": "4c46"
+    },
+    {
+      "LOOKUP_VALUE_ID": 31,
+      "LOOKUP_VALUE": "Pcs",
+      "id": "7125"
+    },
+    {
+      "LOOKUP_VALUE_ID": 32,
+      "LOOKUP_VALUE": "Nos",
+      "id": "6151"
+    },
+    {
+      "LOOKUP_VALUE_ID": 33,
+      "LOOKUP_VALUE": "Box",
+      "id": "704e"
+    },
+    {
+      "LOOKUP_VALUE_ID": 34,
+      "LOOKUP_VALUE": "Kg",
+      "id": "6f6b"
+    },
+    {
+      "LOOKUP_VALUE_ID": 35,
+      "LOOKUP_VALUE": "Bag",
+      "id": "9d32"
+    },
+    {
+      "LOOKUP_VALUE_ID": 36,
+      "LOOKUP_VALUE": "Ft",
+      "id": "8814"
+    },
+    {
+      "LOOKUP_VALUE_ID": 37,
+      "LOOKUP_VALUE": "Mtr",
+      "id": "ce24"
+    },
+    {
+      "LOOKUP_VALUE_ID": 38,
+      "LOOKUP_VALUE": "Ltr",
+      "id": "9a77"
+    },
+    {
+      "LOOKUP_VALUE_ID": 41,
+      "LOOKUP_VALUE": "VAT",
+      "id": "09e6"
+    },
+    {
+      "LOOKUP_VALUE_ID": 46,
+      "LOOKUP_VALUE": "PUR",
+      "id": "0706"
+    },
+    {
+      "LOOKUP_VALUE_ID": 47,
+      "LOOKUP_VALUE": "PUR-RET",
+      "id": "ed00"
+    },
+    {
+      "LOOKUP_VALUE_ID": 48,
+      "LOOKUP_VALUE": "SALE",
+      "id": "ee50"
+    },
+    {
+      "LOOKUP_VALUE_ID": 49,
+      "LOOKUP_VALUE": "SALE-RET",
+      "id": "ee5a"
+    },
+    {
+      "LOOKUP_VALUE_ID": 50,
+      "LOOKUP_VALUE": "BR",
+      "id": "3775"
+    },
+    {
+      "LOOKUP_VALUE_ID": 51,
+      "LOOKUP_VALUE": "BP",
+      "id": "0230"
+    },
+    {
+      "LOOKUP_VALUE_ID": 52,
+      "LOOKUP_VALUE": "JV",
+      "id": "658d"
+    },
+    {
+      "LOOKUP_VALUE_ID": 53,
+      "LOOKUP_VALUE": "PC",
+      "id": "4090"
+    },
+    {
+      "LOOKUP_VALUE_ID": 54,
+      "LOOKUP_VALUE": "CR",
+      "id": "8e95"
+    },
+    {
+      "LOOKUP_VALUE_ID": 55,
+      "LOOKUP_VALUE": "Glue and Adhesive",
+      "id": "1ce1"
+    },
+    {
+      "LOOKUP_VALUE_ID": 56,
+      "LOOKUP_VALUE": "Hardwares Items",
+      "id": "4a35"
+    },
+    {
+      "LOOKUP_VALUE_ID": 57,
+      "LOOKUP_VALUE": "Bale",
+      "id": "8556"
+    },
+    {
+      "LOOKUP_VALUE_ID": 61,
+      "LOOKUP_VALUE": "NO",
+      "id": "5708"
+    },
+    {
+      "LOOKUP_VALUE_ID": 62,
+      "LOOKUP_VALUE": "N",
+      "id": "8604"
+    },
+    {
+      "LOOKUP_VALUE_ID": 63,
+      "LOOKUP_VALUE": "AUTO",
+      "id": "2b2a"
+    },
+    {
+      "LOOKUP_VALUE_ID": 64,
+      "LOOKUP_VALUE": "Purchase Tax",
+      "id": "48af"
+    },
+    {
+      "LOOKUP_VALUE_ID": 65,
+      "LOOKUP_VALUE": "Import",
+      "id": "13bd"
+    },
+    {
+      "LOOKUP_VALUE_ID": 66,
+      "LOOKUP_VALUE": "Local",
+      "id": "5e91"
+    },
+    {
+      "LOOKUP_VALUE_ID": 67,
+      "LOOKUP_VALUE": "Branch Trans",
+      "id": "141e"
+    },
+    {
+      "LOOKUP_VALUE_ID": 70,
+      "LOOKUP_VALUE": "Stock Adjustment",
+      "id": "2385"
+    },
+    {
+      "LOOKUP_VALUE_ID": 71,
+      "LOOKUP_VALUE": "Delivery Out",
+      "id": "a25d"
+    },
+    {
+      "LOOKUP_VALUE_ID": 72,
+      "LOOKUP_VALUE": "Loan Receipt In",
+      "id": "f928"
+    },
+    {
+      "LOOKUP_VALUE_ID": 73,
+      "LOOKUP_VALUE": "Issue For Szing",
+      "id": "78b9"
+    },
+    {
+      "LOOKUP_VALUE_ID": 74,
+      "LOOKUP_VALUE": "Receipt From Szing",
+      "id": "7275"
+    },
+    {
+      "LOOKUP_VALUE_ID": 75,
+      "LOOKUP_VALUE": "Paint",
+      "id": "d803"
+    },
+    {
+      "LOOKUP_VALUE_ID": 77,
+      "LOOKUP_VALUE": "Manufacturing Issue",
+      "id": "bfdf"
+    },
+    {
+      "LOOKUP_VALUE_ID": 78,
+      "LOOKUP_VALUE": "Office Use",
+      "id": "8978"
+    },
+    {
+      "LOOKUP_VALUE_ID": 79,
+      "LOOKUP_VALUE": "Loan Issue",
+      "id": "37d3"
+    },
+    {
+      "LOOKUP_VALUE_ID": 80,
+      "LOOKUP_VALUE": "Loss/Scrap/Replacement",
+      "id": "0205"
+    },
+    {
+      "LOOKUP_VALUE_ID": 81,
+      "LOOKUP_VALUE": "Branch Transfer Out",
+      "id": "4f0a"
+    },
+    {
+      "LOOKUP_VALUE_ID": 82,
+      "LOOKUP_VALUE": "Exchange Out",
+      "id": "3485"
+    },
+    {
+      "LOOKUP_VALUE_ID": 83,
+      "LOOKUP_VALUE": "Manufacturing Loss",
+      "id": "142a"
+    },
+    {
+      "LOOKUP_VALUE_ID": 84,
+      "LOOKUP_VALUE": "Manufacturing Receipt",
+      "id": "22f6"
+    },
+    {
+      "LOOKUP_VALUE_ID": 85,
+      "LOOKUP_VALUE": "Exchange In / Sale Return",
+      "id": "88e5"
+    },
+    {
+      "LOOKUP_VALUE_ID": 86,
+      "LOOKUP_VALUE": "Branch Transfer In",
+      "id": "779f"
+    },
+    {
+      "LOOKUP_VALUE_ID": 87,
+      "LOOKUP_VALUE": "Found Loss of Stock",
+      "id": "2b74"
+    },
+    {
+      "LOOKUP_VALUE_ID": 88,
+      "LOOKUP_VALUE": "Samples",
+      "id": "5d2e"
+    },
+    {
+      "LOOKUP_VALUE_ID": 89,
+      "LOOKUP_VALUE": "Gloss White",
+      "id": "481f"
+    },
+    {
+      "LOOKUP_VALUE_ID": 90,
+      "LOOKUP_VALUE": "PVA",
+      "id": "64d0"
+    },
+    {
+      "LOOKUP_VALUE_ID": 91,
+      "LOOKUP_VALUE": "Bostic",
+      "id": "463c"
+    },
+    {
+      "LOOKUP_VALUE_ID": 92,
+      "LOOKUP_VALUE": "Glue",
+      "id": "1cff"
+    },
+    {
+      "LOOKUP_VALUE_ID": 93,
+      "LOOKUP_VALUE": "Varnish",
+      "id": "82c2"
+    },
+    {
+      "LOOKUP_VALUE_ID": 94,
+      "LOOKUP_VALUE": "Under Coat",
+      "id": "441b"
+    },
+    {
+      "LOOKUP_VALUE_ID": 95,
+      "LOOKUP_VALUE": "Primer",
+      "id": "fa98"
+    },
+    {
+      "LOOKUP_VALUE_ID": 96,
+      "LOOKUP_VALUE": "Cieling White",
+      "id": "98a6"
+    },
+    {
+      "LOOKUP_VALUE_ID": 97,
+      "LOOKUP_VALUE": "Golden Bond",
+      "id": "6985"
+    },
+    {
+      "LOOKUP_VALUE_ID": 98,
+      "LOOKUP_VALUE": "Wash N Wear White",
+      "id": "7cdc"
+    },
+    {
+      "LOOKUP_VALUE_ID": 99,
+      "LOOKUP_VALUE": "Gloss Enamal Black",
+      "id": "ca10"
+    },
+    {
+      "LOOKUP_VALUE_ID": 100,
+      "LOOKUP_VALUE": "Steel Primer / Redoxide",
+      "id": "6896"
+    },
+    {
+      "LOOKUP_VALUE_ID": 101,
+      "LOOKUP_VALUE": "Timber Glaze Teak",
+      "id": "be5c"
+    },
+    {
+      "LOOKUP_VALUE_ID": 102,
+      "LOOKUP_VALUE": "Production Issue",
+      "id": "6016"
+    },
+    {
+      "LOOKUP_VALUE_ID": 103,
+      "LOOKUP_VALUE": "Production Receipt",
+      "id": "3a99"
+    },
+    {
+      "LOOKUP_VALUE_ID": 110,
+      "LOOKUP_VALUE": "Production Iss",
+      "id": "b50a"
+    },
+    {
+      "LOOKUP_VALUE_ID": 111,
+      "LOOKUP_VALUE": "Production Rec",
+      "id": "834c"
+    },
+    {
+      "LOOKUP_VALUE_ID": 112,
+      "LOOKUP_VALUE": "Transfer Out",
+      "id": "60a4"
+    },
+    {
+      "LOOKUP_VALUE_ID": 113,
+      "LOOKUP_VALUE": "Sample Return/ Delivery In",
+      "id": "6f23"
+    },
+    {
+      "LOOKUP_VALUE_ID": 198,
+      "LOOKUP_VALUE": "Inter Change Out",
+      "id": "77ee"
+    },
+    {
+      "LOOKUP_VALUE_ID": 199,
+      "LOOKUP_VALUE": "Inter Change In",
+      "id": "ed96"
+    },
+    {
+      "LOOKUP_VALUE_ID": 200,
+      "LOOKUP_VALUE": "MRP",
+      "id": "5e2a"
+    },
+    {
+      "LOOKUP_VALUE_ID": 201,
+      "LOOKUP_VALUE": "Customer",
+      "id": "a7d2"
+    },
+    {
+      "LOOKUP_VALUE_ID": 202,
+      "LOOKUP_VALUE": "Contractor",
+      "id": "4688"
+    },
+    {
+      "LOOKUP_VALUE_ID": 203,
+      "LOOKUP_VALUE": "Retailer",
+      "id": "1b07"
+    },
+    {
+      "LOOKUP_VALUE_ID": 204,
+      "LOOKUP_VALUE": "Distributor",
+      "id": "3c83"
+    },
+    {
+      "LOOKUP_VALUE_ID": 205,
+      "LOOKUP_VALUE": "MinPrice",
+      "id": "2129"
+    },
+    {
+      "LOOKUP_VALUE_ID": 301,
+      "LOOKUP_VALUE": "Ya",
+      "id": "337a"
+    },
+    {
+      "LOOKUP_VALUE_ID": 401,
+      "LOOKUP_VALUE": "Advance",
+      "id": "5b21"
+    },
+    {
+      "LOOKUP_VALUE_ID": 402,
+      "LOOKUP_VALUE": "Invoice",
+      "id": "4e54"
+    },
+    {
+      "LOOKUP_VALUE_ID": 403,
+      "LOOKUP_VALUE": "Account",
+      "id": "73f9"
+    },
+    {
+      "LOOKUP_VALUE_ID": 501,
+      "LOOKUP_VALUE": "FRMTRNSALES",
+      "id": "79b8"
+    },
+    {
+      "LOOKUP_VALUE_ID": 502,
+      "LOOKUP_VALUE": "FRMTRNJOURNAL",
+      "id": "4a64"
+    },
+    {
+      "LOOKUP_VALUE_ID": 503,
+      "LOOKUP_VALUE": "FRMTRNRECEIPTS",
+      "id": "9c7f"
+    },
+    {
+      "LOOKUP_VALUE_ID": 504,
+      "LOOKUP_VALUE": "FRMTRNPAYMENTS",
+      "id": "619f"
+    }
+  ]
+}
